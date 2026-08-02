@@ -1,354 +1,222 @@
-# ElephantBook
-A field notebook that remembers what matters
+ElephantBook Repository Structure
+
+```
+README.md                 ← Project overview (current document)
+LICENSE                   ← Apache 2.0
+
+docs/
+    DESIGN.md             ← Design philosophy and principles
+    ARCHITECTURE.md       ← Software architecture
+    OBJECT_MODEL.md       ← Core data model
+    MODULES.md            ← Description of all modules
+    UX_PRINCIPLES.md      ← User interface philosophy
+    DATA_PERMANENCE.md    ← Long-term preservation strategy
+    AI.md                 ← AI design philosophy
+    ROADMAP.md            ← Development roadmap
+    CONTRIBUTING.md       ← Contribution guidelines
+    GLOSSARY.md           ← Definitions and terminology
+```
+
+────────
+
+README.md
 
 ElephantBook
 
 Overview
 
-ElephantBook is an open-source personal information management platform designed to become an external memory, organizational system, and thinking partner for individuals. It combines the best ideas from notebooks, password managers, personal knowledge bases, task managers, card systems, and archival software into a unified, privacy-respecting application.
+ElephantBook is an open-source personal knowledge platform designed to become an external memory, organizational system, and thinking partner for individuals.
 
-The name comes from the phrase “an elephant never forgets.” ElephantBook is designed to help people remember, organize, retrieve, and connect information over a lifetime.
+Rather than being a notebook, a task manager, a password vault, or a document archive, ElephantBook unifies all of these into a single coherent knowledge environment.
 
-The project is modular. Each major capability can function independently as its own application while also integrating seamlessly into the complete ElephantBook ecosystem.
+The name comes from the expression:
 
-⸻
+> “An elephant never forgets.”
 
-Philosophy
+ElephantBook is built to help people remember, organize, connect, and preserve knowledge over an entire lifetime.
+
+────────
+
+Vision
 
 Computers should not merely store information.
 
-They should help people remember, organize, understand, and rediscover it.
+They should help people remember.
 
-ElephantBook is designed around the idea that information naturally forms relationships. Notes relate to projects. Projects relate to people. Passwords relate to accounts. Documents relate to events. Ideas evolve into plans. Plans become history.
+Ideas relate to people.
 
-Instead of forcing users into separate applications, ElephantBook provides one integrated knowledge environment.
+People relate to projects.
 
-⸻
+Projects relate to documents.
 
-Goals
+Documents relate to events.
 
-* Open source
-* Cross-platform
-* Privacy first
-* Local-first with optional synchronization
-* Modular architecture
-* Accessible to users of all technical skill levels
-* Long-term archival stability
-* Import and export using open formats
-* Extensible through plugins
-* AI-assisted while keeping users in control
+Events become history.
 
-⸻
+Knowledge is not simply information.
 
-Core Modules
+Knowledge consists of relationships.
 
-Notebook
+ElephantBook exists to preserve those relationships.
 
-A flexible notebook similar to Evernote.
+────────
 
-Features include:
+Philosophy
 
-* Rich text notes
-* Markdown support
-* Images
-* Audio recordings
-* PDF attachments
-* Tags
-* Full-text search
-* Cross-linked notes
-* Version history
-* OCR for scanned documents
+The software should remain simple even when its architecture becomes sophisticated.
 
-⸻
+Capturing an idea should be as effortless as opening a notebook and writing on the next blank page.
 
-Cards
+Organization can happen later.
 
-Inspired by Trello.
+The first responsibility of ElephantBook is simply to remember.
 
-Organize information using boards, lists, and cards.
+────────
 
-Features:
+Inspirations
 
-* Kanban boards
-* Nested cards
-* Checklists
-* Due dates
-* Labels
-* Attachments
-* Comments
-* Drag-and-drop organization
-* Project templates
+ElephantBook does not attempt to replace successful ideas.
 
-⸻
+It attempts to unify them.
 
-Password Vault
+Its inspirations include:
 
-Inspired by Dashlane and open-source password managers.
+• Moleskine — permanence, simplicity, and trust.
+• Fisher Space Pen — dependable tools built to last.
+• ThinkTank — recursive outlining and structured thinking.
+• Evernote — flexible knowledge capture.
+• Trello — movable cards and visual organization.
+• Dashlane and open password managers — secure personal memory.
+• Git — complete history and versioning.
+• Unix — modular tools working together.
+• LibreOffice and the OpenDocument Format — open, durable document standards designed for long-term accessibility.
 
-Features:
+Each contributes an enduring design principle rather than merely a feature.
 
-* Encrypted password storage
-* Passkeys
-* Secure notes
-* Two-factor authentication support
-* Password generator
-* Password strength analysis
-* Duplicate password detection
-* Breach monitoring
-* Browser integration
-* Autofill
-* Identity profiles
+────────
 
-The Password Vault is also available as a standalone application.
+Core Principles
 
-⸻
+• Capture first.
+• Complexity belongs inside the software.
+• Knowledge is relationships.
+• One idea may belong in many contexts.
+• Trust before features.
+• Local-first operation.
+• Open standards.
+• User ownership of data.
+• Modular architecture.
+• Extensibility through plugins and open APIs.
+• Built for decades rather than product cycles.
 
-Documents
+────────
 
-Store and organize documents.
+Modules
 
-Supports:
+ElephantBook is organized into independent modules that work together seamlessly.
 
-* PDF
-* Office documents
-* Images
-* Plain text
-* Markdown
-* Source code
-* Email archives
+Examples include:
 
-Features:
+• Notebook
+• Cards
+• Password Vault
+• Documents
+• Journal
+• Contacts
+• Calendar
+• Tasks
+• Collections
+• Search
+• Knowledge Graph
+• AI Assistant
 
-* Metadata
-* OCR
-* Full-text indexing
-* Tags
-* Relationships
-* Preview
-* Version history
+Each module may also function independently.
 
-⸻
+────────
 
-Journal
+Data Permanence
 
-A chronological record of life.
+Knowledge should never become inaccessible because a company disappears or software reaches end of life.
 
-Features:
+ElephantBook therefore favors:
 
-* Daily entries
-* Automatic timestamps
-* Photos
-* Voice notes
-* Weather (optional)
-* Mood tracking
-* Location (optional)
-* Timeline browsing
+• Open standards
+• Open specifications
+• Human-readable exports
+• Documented file formats
+• Complete data portability
+• Transparent storage
+• Backward compatibility whenever practical
 
-⸻
+The user’s knowledge should remain recoverable independently of ElephantBook itself.
 
-Contacts
+────────
 
-Store information about people.
+AI
 
-Features:
+Artificial intelligence exists to assist the user.
 
-* Addresses
-* Phone numbers
-* Email
-* Social media
-* Relationships
-* Notes
-* Conversation history
-* Birthdays
-* Organizations
+It summarizes.
 
-⸻
+Suggests.
 
-Calendar
+Searches.
 
-Personal scheduling.
+Discovers relationships.
 
-Features:
+Helps write.
 
-* Events
-* Reminders
-* Deadlines
-* Recurring events
-* Project integration
-* Calendar synchronization
+Helps organize.
 
-⸻
+The AI never owns the user’s information.
 
-Tasks
+The user always remains in control.
 
-A complete task management system.
+────────
 
-Features:
+Long-Term Goal
 
-* Projects
-* Priorities
-* Contexts
-* Recurring tasks
-* Deadlines
-* Dependencies
-* Progress tracking
+ElephantBook is intended to become more valuable every year it is used.
 
-⸻
+Like a trusted notebook or a favorite pen, it should become a lifelong companion rather than a disposable application.
 
-Collections
+Its purpose is not merely to organize files.
 
-Organize anything.
+Its purpose is to preserve human knowledge.
 
-Examples:
+────────
 
-* Books
-* Movies
-* Recipes
-* Research papers
-* Wine
-* Coins
-* Music
-* Software licenses
-* Hardware inventory
+Future Documentation
 
-Users define their own collection types.
+As the project grows, additional documents will describe:
 
-⸻
+• Design philosophy
+• Internal architecture
+• Object model
+• Module specifications
+• User experience
+• Data permanence
+• AI architecture
+• Roadmap
+• Contribution guidelines
 
-Search
+The README introduces the project.
 
-One search box searches everything.
+The supporting documents explain it in depth.
 
-Searches include:
-
-* Notes
-* Passwords
-* Documents
-* Cards
-* Tasks
-* Calendar
-* Contacts
-* Collections
-
-Search results understand relationships between items.
-
-⸻
-
-Knowledge Graph
-
-ElephantBook understands connections.
-
-Examples:
-
-* This person worked on this project.
-* This project contains these documents.
-* This password belongs to this website.
-* This note references this meeting.
-* This book inspired this idea.
-
-Users can visualize and explore these relationships.
-
-⸻
-
-AI Assistant
-
-AI operates as an assistant rather than an owner of the data.
-
-Capabilities include:
-
-* Summarization
-* Search assistance
-* Brainstorming
-* Organization suggestions
-* Duplicate detection
-* Relationship discovery
-* Writing assistance
-* Semantic search
-* Natural language queries
-
-Users always remain in control of their information.
-
-⸻
-
-Architecture
-
-ElephantBook is built around independent modules connected through shared data models.
-
-Each module can operate:
-
-* Independently
-* As part of the integrated suite
-* Through plugins
-* Through open APIs
-
-This architecture allows users to install only the components they need.
-
-⸻
-
-Design Principles
-
-* Open standards
-* Open file formats
-* Strong encryption
-* Privacy by design
-* Offline operation
-* Fast startup
-* Long-term compatibility
-* Transparent storage
-* Human-readable exports
-* Accessibility
-* Internationalization
-* Automation support
-
-⸻
-
-Target Users
-
-* Students
-* Researchers
-* Writers
-* Software developers
-* Teachers
-* Lawyers
-* Journalists
-* Scientists
-* Small businesses
-* Families
-* Anyone who wants a reliable external memory
-
-⸻
-
-Technology Goals
-
-Possible technologies include:
-
-* Rust
-* C++
-* Python
-* SQLite
-* PostgreSQL
-* Markdown
-* JSON
-* YAML
-* WebAssembly
-
-Technology choices should favor maintainability, portability, performance, and long-term sustainability.
-
-⸻
+────────
 
 License
 
 Apache License 2.0
 
-⸻
+────────
 
-Vision
+Closing Vision
 
-ElephantBook aims to become the open-source equivalent of an integrated personal knowledge system.
+ElephantBook aspires to combine the permanence of a Moleskine notebook, the dependability of a Fisher Space Pen, the recursive thinking of ThinkTank, the flexibility of Evernote, the organization of Trello, the security of a password vault, and the longevity of open standards.
 
-Rather than replacing existing tools individually, it unifies the best ideas from notebooks, password managers, project boards, document archives, calendars, task managers, and knowledge graphs into one coherent platform.
+The goal is not merely to build another productivity application.
 
-The long-term vision is to build software that people can trust with a lifetime of information—software that is private, extensible, durable, understandable, and always under the user’s control.
-
-ElephantBook is intended to become a true digital memory: a place where ideas, knowledge, documents, passwords, projects, relationships, and history are preserved, connected, and made useful for decades to come.
+The goal is to build software worthy of becoming a lifelong companion for human knowledge.
 
